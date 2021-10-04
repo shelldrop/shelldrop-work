@@ -9,6 +9,7 @@
         # cryptoticker
       
             Crypto price ticker with Binance API
+            Crypto price ticker with Kucoin API
 
 
         # zahlenratespiel
