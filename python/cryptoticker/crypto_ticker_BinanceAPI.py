@@ -13,7 +13,7 @@ import requests
 
 
 # list pair
-pair = ["BTCUSDT","ETHUSDT","ADAUSDT","SOLUSDT","DOTUSDT","XTZUSDT","XMRUSDT"]
+pair = ["BTCUSDT","ETHUSDT","ADAUSDT","SOLUSDT","DOTUSDT","XTZUSDT","XMRUSDT", "LUNAUSDT", "HBARUSDT"]
 
 
 # def head
