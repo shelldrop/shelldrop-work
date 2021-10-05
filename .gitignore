@@ -1,0 +1,34 @@
+#
+# .gitignore
+#
+# # # # # # # # # #
+
+
+
+# Ignore -> shelldrop
+
+git_tutorial
+
+1_admin/
+tcltk/
+
+
+
+# Ignore -> shell
+
+shell/test/
+
+
+
+# Ignore -> python
+
+python/test/
+
+
+
+
+
+# End
+
+#
+

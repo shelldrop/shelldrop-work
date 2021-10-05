@@ -3,30 +3,28 @@
     # shelldrop
 
     # info@shelldrop.ch
-      
 
-         
+
+
         # shell
-      
-            My shellscripts
-         
 
-        # tcltk
-
-            My tcltk scripts
+            lib
+            sd-sync
+            sd-backup
+            sd-binancebot
+            sd-cryptofolio
 
 
         # python
    
-            My python scripts
+            cryptoticker
+            zahlenratespiel
 
 
 
-
-
-        # test
+        # temp
    
-            My test scripts -> not for use
+            temp test scripts -> not for use
 
 
 
