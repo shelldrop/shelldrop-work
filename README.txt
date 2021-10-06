@@ -24,7 +24,7 @@
 
         # temp
    
-            temp test scripts -> not for use
+            temp -> not for use
 
 
 
