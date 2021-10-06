@@ -15,7 +15,7 @@ import requests
 # list pair
 pair = ["BTC-USDT", "ETH-USDT", "ADA-USDT", "SOL-USDT", "DOT-USDT", \
         "LUNA-USDT", "ALGO-USDT", "XTZ-USDT", "HBAR-USDT", "XMR-USDT", \
-        "PDEX-USDT", "DFI-USDT"]
+        "PDEX-USDT", "DFI-USDT", "FTT-USDT", "SHIB-USDT"]
 
 
 # def head
