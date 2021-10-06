@@ -9,6 +9,7 @@
 
 git_tutorial
 
+**/__pycache__/
 1_admin/
 tcltk/
 
