@@ -1,36 +1,31 @@
 #!/usr/bin/env bash
+#
+# api_kucoin
+#
 
-# # # bash api_binance.sh
+# Get API
 #
-#        source api_binance.sh
+#   get_pair pair
+#       return price change24pro avg24 avg5
 #
-# # #
-
-
-# # # Get API
+#   get_balance asset
+#       return balance
 #
-#        get_pair pair
-#           return price change24pro avg24 avg5
+#   get_orders pair
+#       return orders
 #
-#        get_balance asset
-#           return balance
+#   market pair side quantity
 #
-#        get_orders pair
-#           return orders
+#   limit pair side quantity price
 #
-#        market pair side quantity
+#   stoplosslimit pair side quantity limit_price stop_price
 #
-#        limit pair side quantity price
+#   oco pair side quantity $price stop
 #
-#        stoplosslimit pair side quantity limit_price stop_price
+#   del_order_id pair orderId
 #
-#        oco pair side quantity $price stop
+#   del_order_all pair
 #
-#        del_order_id pair orderId
-#
-#        del_order_all pair
-#
-# # #
 
 
 

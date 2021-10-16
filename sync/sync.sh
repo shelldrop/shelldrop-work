@@ -1,19 +1,17 @@
 #!/usr/bin/env bash
 
-# # # bash sd-sync.sh
+# sync
+#
+# The program synchronizes the entire folder in which this file is located
+# with the Remote-Host
+#
+# Config Remote_Host
+#
+#   Remote-Host need openssh-server
+#
+    remote_host=user@192.168.XXX.XXX:/home/user/
 #
 #
-#     The program synchronizes the entire folder in which this file is located
-#     with the Remote-Host
-#
-#
-#     Config Remote_Host
-#
-#        Remote-Host need openssh-server
-#
-         remote_host=user@192.168.XXX.XXX:/home/user/
-#
-# # #
 
 
 

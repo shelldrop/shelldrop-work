@@ -1,19 +1,18 @@
 #!/usr/bin/env bash
 
-# # # bash sd-backup.sh
+# backup
+#
+# The program backup the entire folder in which this file is located
+# to the FTP Server
 #
 #
-#        The program backup the entire folder in which this file is located
-#        to the FTP Server
+# Config FTP Server
+#
+    ftp_host="ftp://myhost.com/folder"
+    user_name="MyUserName"
+    backup_name="BackupName"
 #
 #
-#     Config FTP Server
-#
-         ftp_host="ftp://myhost.com/folder"
-         user_name="MyUserName"
-         backup_name="BackupName"
-#
-# # #
 
 
 

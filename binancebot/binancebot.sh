@@ -1,40 +1,36 @@
 #!/usr/bin/env bash
 
-# # # bash sd-binancebot.sh
+# binancebot
 #
+# This is a Binance Bot to trade automatically on Binance.
 #
-#     This is a Binance Bot to trade automatically on Binance.
-#
-#     Used ../lib
-#     > sudo apt install jq curl
-#
+#   Used ../lib
+#   > sudo apt install jq curl
 #
 # Config API Key
-#
-      APIKEY="<API Key>"
-      APISECRET="<Secret Key>"
+    APIKEY="<API Key>"
+    APISECRET="<Secret Key>"
 #
 # Loop time s
-      loop_time='60'
+    loop_time='60'
 #  
 # Pair
-      first_pair="BNB"
-      last_pair="USDT"
+    first_pair="BNB"
+    last_pair="USDT"
 #
 # OCO BUY
-      buy_vol="2"
-      buy_price="330"
-      buy_stop="380"
-      buy_stop_limit="370"
+    buy_vol="2"
+    buy_price="330"
+    buy_stop="380"
+    buy_stop_limit="370"
 # 
 # OCO SELL
-      sell_vol="2"
-      sell_price="380"
-      sell_stop="330"
-      sell_stop_limit="320"
+    sell_vol="2"
+    sell_price="380"
+    sell_stop="330"
+    sell_stop_limit="320"
 #
 #
-# # #
 
 
 

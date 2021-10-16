@@ -7,18 +7,9 @@
 # Ignore -> shelldrop
 
 git_tutorial
-
-**/__pycache__/
 1_admin/
-tcltk/
+**/__pycache__/
 
-
-
-# Ignore -> shell
-
-
-
-# Ignore -> python
 
 
 

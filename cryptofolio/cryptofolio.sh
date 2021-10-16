@@ -1,48 +1,42 @@
 #!/usr/bin/env bash
 
-# # # bash sd-cryptofolio.sh
+# cryptofolio
 #
+# Portfolio for your Crypto Assets
 #
-#     Portfolio for your Crypto Assets
+#   > sudo apt install curl jq
 #
-#     Does not use ../lib
-#
-#     > sudo apt install curl jq
-#
-#
-#     > Config your Assets like this
+#   > Config your Assets like this
 function get_price() {
 
-         
-         set_price "BTC" "1.1"
-         set_price "DOGE" "1.3"
-         set_price "ETH" "2.2"
-         set_price "XMR" "1.8"
+    set_price "BTC" "1.1"
+    set_price "DOGE" "1.3"
+    set_price "ETH" "2.2"
+    set_price "XMR" "1.8"
 
 
 }
 #
 #
-# # #
 
 
 
 # Relative Path
-   parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
-   cd "$parent_path"
+    parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+    cd "$parent_path"
    
 
 # Terminal Config
-   PS1=""
-   clear
+    PS1=""
+    clear
 	
 
 # Head
 function set_head() {
-   clear
-   echo -e "\n\n\t # sd-cryptofolio \n\n\n";
-   echo -e "\t Asset \t\t Price \t\t\t Number \t Total $ \n"
-   echo -e "\t ---------------------------------------------------------------------- \n"
+    clear
+    echo -e "\n\n\t # sd-cryptofolio \n\n\n";
+    echo -e "\t Asset \t\t Price \t\t\t Number \t Total $ \n"
+    echo -e "\t ---------------------------------------------------------------------- \n"
 }
 
 
