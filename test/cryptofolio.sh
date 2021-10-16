@@ -9,10 +9,10 @@
 #   > Config your Assets like this
 get_price() {
 
-    set_price "BTC" "1.1"
-    set_price "DOGE" "1.3"
-    set_price "ETH" "2.2"
-    set_price "XMR" "1.8"
+    price "BTC" "1.1"
+    price "DOGE" "1.3"
+    price "ETH" "2.2"
+    price "XMR" "1.8"
 
 
 }
@@ -20,19 +20,15 @@ get_price() {
 #
 
 
-
-# Relative Path
+# Base
     parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
     cd "$parent_path"
-   
-
-# Terminal Config
     PS1=""
-    clear
-	
+    clear  
 
-# Head
-set_head() {
+
+# Def header
+header() {
     clear
     echo -e "\n\n\t # sd-cryptofolio \n\n\n";
     echo -e "\t Asset \t\t Price \t\t\t Number \t Total $ \n"
@@ -40,8 +36,8 @@ set_head() {
 }
 
 
-# Set Price
-set_price() {
+# Def price
+price() {
    last_symbol="USDT"
    pair=$1$last_symbol
    price=$(curl -s -H -X GET 'https://api.binance.com/api/v3/ticker/price?symbol='$pair | jq -r '.price')
@@ -51,7 +47,7 @@ set_price() {
 }
   
 
-# Navi
+# Def navi
 navi() {
    echo -e "\n\t ---------------------------------------------------------------------- \n"
    printf "\t\t\t\t\t\t\t\t %.2f %s \n" $bilanz $last_symbol
@@ -68,10 +64,10 @@ navi() {
 }
 
 
-# Func run
+# Def init
 init() {
    bilanz=0
-   set_head
+   header
    get_price
    navi
 }
@@ -79,8 +75,7 @@ init
    
    
    
-# # # End
+# End
 
 #
 
-#
