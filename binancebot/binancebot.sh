@@ -47,7 +47,7 @@
    pair=$first_pair$last_pair
 
 
-# Logic
+# Def logic
 logic() {
 
 # Get Price
@@ -92,7 +92,7 @@ logic() {
 }
 
 
-# Init
+# Def init
 init() {
     logic
     sleep $loop_time

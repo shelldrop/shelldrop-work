@@ -18,14 +18,14 @@
     symbols=("BTC-USDT" "ETH-USDT" "DOT-USDT" "PDEX-USDT" "DFI-USDT" "XMR-USDT")
 
 
-# Function Header
+# Def header
 header() {
     echo -e " # Cryptoticker"
     echo -e "\n"
 }
 
 
-# Loop Symbols
+# Def price -> Loop Symbols
 price() {
     for i in "${symbols[@]}"
     do
@@ -35,7 +35,7 @@ price() {
 }
 
 
-# Navi
+# Def navi
 navi() {
     echo -e "\n\n"
     echo -n -e "\tExit(e) | Repeat(r) -> "
@@ -50,7 +50,7 @@ navi() {
 }
 
 
-# Func run
+# Def init
 init() {
     clear
     header

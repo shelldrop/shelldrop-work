@@ -22,7 +22,7 @@
     clear
 
 
-# Navi
+# Def navi
 navi() {
     clear
     echo -e "\n\n\n\t sd-backup\n\n"
@@ -64,8 +64,8 @@ navi() {
 }
 
 
-# Init
-  navi
+# navi
+navi
 
 
 

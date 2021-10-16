@@ -14,7 +14,7 @@
 #
 
 
-# Init
+# Def init
 init() {
     clear
     folder=`echo $PWD | rev | cut -d'/' -f1 | rev`
@@ -30,7 +30,7 @@ init() {
 }
 
 
-# Navi
+# Def navi
 navi() {
     echo -e "\n\n\n\t shelldrop-sync\n\n"
     echo -e "\t local folder\t $PWD\n"
@@ -52,7 +52,7 @@ navi() {
 }
 
 
-# Upload
+# Def upload
 upload() {
     rsync -urz --delete -e ssh . $remote_host$folder
     clear
@@ -62,7 +62,7 @@ upload() {
 }
 
 
-# Download
+# Def download
 download() {
     rsync -urz --delete -e ssh $remote_host$folder ../.
     clear
@@ -72,7 +72,7 @@ download() {
 }
 
 
-# loop
+# init
 init
 
 

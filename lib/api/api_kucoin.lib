@@ -6,7 +6,7 @@
 #
 
 
-# Get Price
+# Def get_price
 get_price() {
    price=$(curl -s -H -X GET 'https://api.kucoin.com/api/v1/market/orderbook/level1?symbol='$1 | jq -r '.data.price')
    echo -e "$price"
