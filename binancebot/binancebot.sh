@@ -40,7 +40,7 @@
 
 
 # Source
-   source ../lib/api_binance.sh
+   source ../lib/api/api_binance.sh
 
 
 # Vars INI
