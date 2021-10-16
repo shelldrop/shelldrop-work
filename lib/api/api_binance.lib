@@ -28,7 +28,6 @@
 #
 
 
-
 # Get Pair
 get_pair() {
    price=$(curl -s -H "X-MBX-APIKEY: $APIKEY" -X GET 'https://api.binance.com/api/v3/ticker/price?symbol='$1 | jq -r '.price')
@@ -165,9 +164,7 @@ del_order_all() {
 
 
 
-# # # End
-
-#
+# End
 
 #
 

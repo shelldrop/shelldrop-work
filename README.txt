@@ -33,9 +33,9 @@
             Good luck.
          
          
-        # cryptofolio
+        # cryptoticker
    
-            Portfolio for your Crypto Assets.
+            Cryptoticker with Kucoin API
 
             
 
