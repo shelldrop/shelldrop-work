@@ -33,78 +33,77 @@
 #
 
 
+# Base
+    parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+    cd "$parent_path"
+    PS1=""
 
-# Relative Path
-   parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
-   cd "$parent_path"
 
 # Source
    source ../lib/api_binance.sh
+
 
 # Vars INI
    pair=$first_pair$last_pair
 
 
-
 # Logic
-function logic() {
+logic() {
 
 # Get Price
-   get_pair $pair
-   f_price=$price
-  
+    get_pair $pair
+    f_price=$price
+
 # Get Orders
-   get_orders $pair
-   f_orders=$orders
- 
+    get_orders $pair
+    f_orders=$orders
+
 # Get Balance
-   get_balance $first_pair
-   f_balance_first=$balance
-   get_balance $last_pair
-   f_balance_last=$balance
+    get_balance $first_pair
+    f_balance_first=$balance
+    get_balance $last_pair
+    f_balance_last=$balance
 
 
 # If Order Exist
-   clear
+    clear
    
-   if [ "$f_orders" == "" ]
-   then
-      oco $pair "BUY" $buy_vol $buy_price $buy_stop $buy_stop_limit
-      not_sell="true"
-      echo -e "\n\n\t BUY"
-   fi
-   
-   if [ "$f_orders" != "" ] && [ "$not_sell" != "true" ]
-   then
-      oco $pair "SELL" $sell_vol $sell_price $sell_stop $sell_stop_limit
-      echo -e "\n\n\t SELL"
-   fi
+    if [ "$f_orders" == "" ]
+    then
+        oco $pair "BUY" $buy_vol $buy_price $buy_stop $buy_stop_limit
+        not_sell="true"
+        echo -e "\n\n\t BUY"
+    fi
 
-   not_sell="false"
+    if [ "$f_orders" != "" ] && [ "$not_sell" != "true" ]
+    then
+        oco $pair "SELL" $sell_vol $sell_price $sell_stop $sell_stop_limit
+        echo -e "\n\n\t SELL"
+    fi
 
-   echo -e "\n\n\t Pair: " $pair
-   echo -e "\t Price: " $f_price
-   echo -e "\t Balance First Pair: " $f_balance_first
-   echo -e "\t Balance Last Pair: " $f_balance_last
-   echo -e "\n\n"
-  
+    not_sell="false"
+
+    echo -e "\n\n\t Pair: " $pair
+    echo -e "\t Price: " $f_price
+    echo -e "\t Balance First Pair: " $f_balance_first
+    echo -e "\t Balance Last Pair: " $f_balance_last
+    echo -e "\n\n"
+
 }
 
 
-
 # Init
-function init() {
-  logic
-  sleep $loop_time
-  init
+init() {
+    logic
+    sleep $loop_time
+    init
 }
 init
 
 
 
-# # # End
+# End
 
 #
 
-#
 

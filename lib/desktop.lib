@@ -1,0 +1,16 @@
+#
+# Ubuntu .desktop
+#
+
+
+[Desktop Entry]
+Name=name
+Exec=bash /path/to/script/script.sh
+Terminal=true
+Type=Application
+
+
+
+# End
+
+#

@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#
+# api_kucoin
+#
+#   get_price "Symbol"
+#
+
+
+
+# Get Price
+get_price() {
+   price=$(curl -s -H -X GET 'https://api.kucoin.com/api/v1/market/orderbook/level1?symbol='$1 | jq -r '.data.price')
+   echo -e "$price"
+}
+
+
+# End
+
+#
+

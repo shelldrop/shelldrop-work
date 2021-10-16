@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# api_kucoin
+# api_binance
 #
 
 # Get API
@@ -30,7 +30,7 @@
 
 
 # Get Pair
-function get_pair() {
+get_pair() {
    price=$(curl -s -H "X-MBX-APIKEY: $APIKEY" -X GET 'https://api.binance.com/api/v3/ticker/price?symbol='$1 | jq -r '.price')
    change24pro=$(curl -s -H "X-MBX-APIKEY: $APIKEY" -X GET 'https://api.binance.com/api/v3/ticker/24hr?symbol='$1 | jq -r '.priceChangePercent')
    avg24=$(curl -s -H "X-MBX-APIKEY: $APIKEY" -X GET 'https://api.binance.com/api/v3/ticker/24hr?symbol='$1 | jq -r '.weightedAvgPrice')
@@ -39,7 +39,7 @@ function get_pair() {
 
 
 # Get Balance
-function get_balance() {
+get_balance() {
    timestamp=$(( $(date +%s) *1000))
    timestamp='timestamp='$timestamp
    querystring=$timestamp
@@ -51,7 +51,7 @@ function get_balance() {
 
 
 # Get Orders
-function get_orders() {
+get_orders() {
    symbol='symbol='$1
    timestamp=$(( $(date +%s) *1000))
    timestamp='timestamp='$timestamp
@@ -65,7 +65,7 @@ function get_orders() {
 
 
 # Market
-function market() {
+market() {
    symbol='symbol='$1
    side='side='$2
    type='type=MARKET'
@@ -82,7 +82,7 @@ function market() {
 
 
 # Limit
-function limit() {
+limit() {
    symbol='symbol='$1
    side='side='$2
    type='type=LIMIT'
@@ -100,7 +100,7 @@ function limit() {
 
 
 # Stop Loss Limit
-function stoplosslimit() {
+stoplosslimit() {
    symbol='symbol='$1
    side='side='$2
    type='type=STOP_LOSS_LIMIT'
@@ -119,7 +119,7 @@ function stoplosslimit() {
 
 
 # OCO
-function oco() {
+oco() {
    symbol='symbol='$1
    side='side='$2
    quantity='quantity='$3
@@ -138,7 +138,7 @@ function oco() {
 
 
 # Delete Order by Id
-function del_order_id() {
+del_order_id() {
    symbol='symbol='$1
    order_id='orderId='$2
    timestamp=$(( $(date +%s) *1000))
@@ -152,7 +152,7 @@ function del_order_id() {
 
 
 # Delete all Order
-function del_order_all() {
+del_order_all() {
    symbol='symbol='$1
    timestamp=$(( $(date +%s) *1000))
    timestamp='timestamp='$timestamp

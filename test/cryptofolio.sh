@@ -7,7 +7,7 @@
 #   > sudo apt install curl jq
 #
 #   > Config your Assets like this
-function get_price() {
+get_price() {
 
     set_price "BTC" "1.1"
     set_price "DOGE" "1.3"
@@ -32,7 +32,7 @@ function get_price() {
 	
 
 # Head
-function set_head() {
+set_head() {
     clear
     echo -e "\n\n\t # sd-cryptofolio \n\n\n";
     echo -e "\t Asset \t\t Price \t\t\t Number \t Total $ \n"
@@ -41,7 +41,7 @@ function set_head() {
 
 
 # Set Price
-function set_price() {
+set_price() {
    last_symbol="USDT"
    pair=$1$last_symbol
    price=$(curl -s -H -X GET 'https://api.binance.com/api/v3/ticker/price?symbol='$pair | jq -r '.price')
@@ -52,7 +52,7 @@ function set_price() {
   
 
 # Navi
-function navi() {
+navi() {
    echo -e "\n\t ---------------------------------------------------------------------- \n"
    printf "\t\t\t\t\t\t\t\t %.2f %s \n" $bilanz $last_symbol
    echo -e "\n\n\n\t [e] \t exit "
@@ -69,16 +69,13 @@ function navi() {
 
 
 # Func run
-function init() {
+init() {
    bilanz=0
    set_head
    get_price
    navi
 }
-
-
-# loop
-   init
+init
    
    
    
