@@ -47,7 +47,7 @@ navi() {
     else
         exit 1
     fi     
-}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
+}
 
 
 # Func run
