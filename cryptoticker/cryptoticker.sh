@@ -15,22 +15,28 @@
 
 
 # Array -> Symbols
-    symbols=("BTC-USDT" "ETH-USDT" "DOT-USDT" "PDEX-USDT" "DFI-USDT" "XMR-USDT")
+    symbols=("BTC-USDT" "ETH-USDT" "LTC-USDT" "XMR-USDT" "DFI-USDT" "DOT-USDT" "PDEX-USDT" "LUNA-USDT" "SOV-USDT" \
+    "XTZ-USDT" "HBAR-USDT" "SOL-USDT" "COTI-USDT" "LINK-USDT" "CPOOL-USDT" )
 
 
 # Def header
 header() {
+    echo -e "\n"
     echo -e " # Cryptoticker"
     echo -e "\n"
 }
 
 
-# Def price -> Loop Symbols
+# Def data -> Loop Symbols
 price() {
     for i in "${symbols[@]}"
     do
         echo -n -e "\t$i\t"
-        get_price $i
+            get_price $i
+        echo -e -n "\t\t"
+            get_change24h $i
+        echo -e -n "\n"
+        
     done
 }
 

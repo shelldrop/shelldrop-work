@@ -9,7 +9,15 @@
 # Def get_price
 get_price() {
    price=$(curl -s -H -X GET 'https://api.kucoin.com/api/v1/market/orderbook/level1?symbol='$1 | jq -r '.data.price')
-   echo -e "$price"
+   echo -e -n "$price"
+}
+
+
+# Def get_change24h
+get_change24h() {
+   change24h_t=$(curl -s -H -X GET 'https://api.kucoin.com/api/v1/market/stats?symbol='$1 | jq -r '.data.changeRate')
+   change24h=`printf %.2f $(echo "scale=0; $change24h_t*100" | bc | sed -e 's/^-\./-0./' -e 's/^\./0./')`
+   echo -e -n "$change24h"
 }
 
 
